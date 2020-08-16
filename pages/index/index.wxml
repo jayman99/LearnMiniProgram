@@ -1,4 +1,23 @@
 <!--pages/index/index.wxml-->
 <text>Hello World</text>
 <view>不良人</view>
-<button size="mini">点我</button>
+<!-- 1.获取用户的信息方法 -->
+    <!-- wx.getUserInfo({
+          success: function(res) {
+            console.log(res)
+          }
+        }) -->
+
+<!-- 2.获取用户的信息方法 -->
+<button size="mini" 
+        open-type="getUserInfo" 
+        bindgetuserinfo="handleUserInfo">
+  点我获取授权
+</button>
+
+<!-- 3.展示用户信息的方式 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view bindtap="handleViewClick">{{message}}</view>
+<view wx:for="{{list}}">{{item.access_num}}</view>
