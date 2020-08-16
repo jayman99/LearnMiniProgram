@@ -1,0 +1,24 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view的基本使用 -->
+<view class="wrip">哈哈哈</view>
+<view>呵呵呵</view>
+
+<!-- 2.hover-class: 当用户按下时显示的样式 -->
+<!-- 3.hover-stay-time: 手指松开后点击态保留时间，单位毫秒 -->
+<view 
+    class="wrip_01" 
+    hover-class="hover-view1"
+    hover-stay-time="0">
+  wrip_01
+</view>
+
+<!-- 4.hover-stop-propagation: 指定是否阻止本节点的祖先节点出现点击态 -->
+<view class="wrip_02" hover-class="hover-view2">
+  <view 
+      class="wrip_01" 
+      hover-class="hover-view1"
+      hover-stay-time="0"
+      hover-stop-propagation="b">
+    wrip_01
+  </view>
+</view>

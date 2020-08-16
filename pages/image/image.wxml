@@ -1,0 +1,44 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image的基本使用 -->
+<!-- 重点：
+      1.image组件可以写成单标签，也可以写成双标签
+      2.image组件默认有大小320*240
+      3.image组件是行内块元素（inline-block）
+   -->
+<image/>
+<text>哈哈哈</text>
+
+<!-- 2.src: 本地地址(相对路径、绝对路径)/远程地址 -->
+<image src="../../assets/image/avatar.jpg"/>
+<image src="/assets/image/avatar.jpg"/>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+<!-- 补充：显示相册图片 -->
+<button bindtap="handleChooseAlbum">选中图片</button>
+<image src="{{imagePath}}"/>
+
+<!-- 3.bindload: 监听图片加载完成 -->
+<!-- 4.lazy-load: 图片懒加载，在即将进入一定范围（上下三屏）时才开始加载 -->
+<image wx:for="{{10}}"
+       src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+       bindload="handleImageLoad"
+       lazy-load/>
+
+<!-- 5.show-menu-by-longpress: 开启长按图片显示识别小程序码菜单 -->
+<image show-menu-by-longpress
+       src="https://imgcache.qq.com/bossweb/service/v8/img/index-code.png"/>
+
+<!-- 6.mode: 图片裁剪、缩放的模式 -->
+<view class="page">
+  <view class="page__hd">
+    <text class="page__title">image</text>
+    <text class="page__desc">图片</text>
+  </view>
+  <view class="page__bd">
+    <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+      <view class="section__title">{{item.text}}</view>
+      <view class="section__ctn">
+        <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
