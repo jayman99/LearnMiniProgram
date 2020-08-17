@@ -1,0 +1,15 @@
+.wrip_01 {
+  color: blueviolet;
+  font-size: 32px;
+}
+
+.wrip_02 {
+  width: 100px;
+  height: 100px;
+  background: lightgreen;
+}
+.wrip_03 {
+  width: 200rpx;
+  height: 200rpx;
+  background: rgb(238, 144, 144);
+}

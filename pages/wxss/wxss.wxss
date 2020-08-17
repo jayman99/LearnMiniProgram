@@ -1,0 +1,32 @@
+/* pages/wxss/wxss.wxss */
+@import './style/wrip.wxss';
+@import './style/content.wxss';
+@import './style/weui-searchbar.wxss';
+
+/* .wrip_01 {
+  color: blueviolet;
+  font-size: 32px;
+}
+
+.content {
+  background: hotpink;
+}
+
+.wrip_02 {
+  width: 100px;
+  height: 100px;
+  background: lightgreen;
+}
+.wrip_03 {
+  width: 200rpx;
+  height: 200rpx;
+  background: rgb(238, 144, 144);
+}
+
+.content_1 {
+  font-size: 32px;
+}
+
+.content_2 {
+  font-size: 64rpx;
+} */

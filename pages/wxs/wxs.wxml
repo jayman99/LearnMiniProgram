@@ -1,0 +1,36 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 错误用法： -->
+<!-- <view>{{3.1415926.toFixed(2)}}</view> -->
+
+<!-- 1.wxs的定义方式 -->
+<!-- <wxs module="info">
+     //JS代码
+  var message = "Hello World";
+  var name = "不良人";
+
+  function sum(num1, num2) {
+    return num1 + num2
+  }
+  function test() {
+    return "test function"
+  }
+
+  // commonjs的模块化写法
+  module.exports = {
+    message: message,
+    name: name,
+    sum: sum,
+    test: test
+  }
+</wxs> -->
+<wxs src="../../wxs/info.wxs" module="info"/>
+
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(12, 18)}}</view>
+
+<!-- 2.wxs的应用 -->
+<wxs src="../../wxs/format.wxs" module="format"/>
+<view>{{format.priceFormat(price, 3)}}</view>
+
+<view>{{format.dateFormat(time, 'yyyy-MM-dd hh:mm:ss')}}</view>

@@ -1,0 +1,3 @@
+<template name="testImport">
+  <view>我是测试import模板</view>
+</template>

@@ -1,2 +1,13 @@
 /**app.wxss**/
+@import './style/btn.wxss';
+
+.container {
+  color: gold;
+  font-size: 32px;
+}
+
+.content {
+  /* background: lightblue; */
+  background: lightblue !important;
+}
 
