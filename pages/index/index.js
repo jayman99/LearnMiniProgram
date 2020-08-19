@@ -1,66 +1,67 @@
 // pages/index/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    
+    titles: ['衣服', '裤子', '鞋子']
+  },
+  handleBtnClick() {
+    console.log("按钮被点击了")
+  },
+  handleTouchStart() {
+    console.log('handleTouchStart')
+  },
+  handleTouchMove() {
+    console.log('handleTouchMove')
+  },
+  handleTouchEnd() {
+    console.log('handleTouchEnd')
+  },
+  handleTap() {
+    console.log('handleTap')
+  },
+  handleLongpress() {
+    console.log('handleLongpress')
+  },
+  handleEventClick(event) {
+    console.log("------------", event)
+  },
+  handleEventEnd(event) {
+    console.log("++++++++++++", event)
+  },
+  handleEventInner(event) {
+    console.log(event)
+  },
+  handleEventOuter(event) {
+    console.log(event)
+  },
+  handleItemClick(event) {
+    console.log(event)
+    // title - index
+    const dataset = event.currentTarget.dataset;
+    const title = dataset.item;
+    const index = dataset.index;
+    console.log(title, index)
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
+  // --------事件冒泡和事件捕获
+  // 最外层
+  handleCaptureViewOut() {
+    console.log('handleCaptureViewOut')
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
+  handleBindViewOut() {
+    console.log('handleBindViewOut')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  // 中间层
+  handleCaptureViewMiddle() {
+    console.log('handleCaptureViewMiddle')
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
+  handleBindViewMiddle() {
+    console.log('handleBindViewMiddle')
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
+  // 最里层
+  handleCaptureViewIn() {
+    console.log('handleCaptureViewIn')
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+  handleBindViewIn() {
+    console.log('handleBindViewIn')
   }
 })

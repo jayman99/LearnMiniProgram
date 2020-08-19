@@ -1,1 +1,42 @@
 /* pages/index/index.wxss */
+.box {
+  width: 300rpx;
+  height: 300rpx;
+  background: salmon;
+}
+
+.outer {
+  width: 400rpx;
+  height: 400rpx;
+  color: aliceblue;
+  background: tomato;
+}
+.inner {
+  width: 200rpx;
+  height: 200rpx;
+  background: skyblue;
+}
+
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+}
+.view_out {
+  width: 600rpx;
+  height: 600rpx;
+  background-color: crimson;
+}
+.view_middle {
+  width: 400rpx;
+  height: 400rpx;
+  background-color: darkorange;
+}
+.view_in {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: deepskyblue;
+}
