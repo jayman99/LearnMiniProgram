@@ -1,1 +1,13 @@
 /* pages/index/index.wxss */
+.title {
+  color: deeppink;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}

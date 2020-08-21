@@ -1,2 +1,4 @@
 <!--pages/about/about.wxml-->
 <text>pages/about/about.wxml</text>
+
+<w-tab-control titles="{{['衣服', '裤子', '鞋子', '背包']}}"/>

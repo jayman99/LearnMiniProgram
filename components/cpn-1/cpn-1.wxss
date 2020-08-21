@@ -1,0 +1,4 @@
+/* conponents/cpn-1/cpn-1.wxss */
+.box {
+  background: deepskyblue;
+}
