@@ -2,3 +2,19 @@
 <text>Hello World</text>
 <view>不良人</view>
 <button size="mini">点我</button>
+<view>-------------------------</view>
+
+<!-- 1.Toast弹窗 -->
+<button size="mini" bindtap="handleShowToast">showToast</button>
+
+<!-- 2.Modal弹窗 -->
+<button size="mini" bindtap="handleShowModal">showModal</button>
+
+<!-- 3.Loading弹窗 -->
+<button size="mini" bindtap="handleShowLoading">showLoading</button>
+
+<!-- 4.actionSheet弹窗 -->
+<button size="mini" bindtap="handleShowActionSheet">showActionSheet</button>
+
+<!-- 5.分享按钮 -->
+<button size="mini" open-type="share">分享</button>
