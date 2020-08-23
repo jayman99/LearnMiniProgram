@@ -2,3 +2,41 @@
 <text>Hello World</text>
 <view>不良人</view>
 <button size="mini">点我</button>
+
+<!-- 1.navigator页面跳转 -->
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+
+<!-- 2.navigator属性： open-type -->
+<!-- open-type取值：
+        redirect: 关闭当前页面，跳转到应用内的某个页面。但不允许跳转到tabbar页面，并且不能返回
+        switchTab: 跳转到tabBar页面，并关闭其他所有的非tabBar页面。
+        reLaunch: 关闭所有的页面，打开应用内的某个页面（直接展示某个页面，并且可以跳转到tabBar页面）
+   -->
+<view>------------------------</view>
+<navigator 
+      url="/pages/detail/detail"
+      open-type="redirect">
+  跳到详情页（redirect）
+</navigator>
+
+<view>------------------------</view>
+<navigator 
+      url="/pages/about/about"
+      open-type="switchTab">
+  跳到关于页（switchTab）
+</navigator>
+
+<view>------------------------</view>
+<navigator 
+      url="/pages/detail/detail"
+      open-type="reLaunch">
+  跳到详情页（reLaunch）
+</navigator>
+
+<!-- 3.跳转过程中数据的传递 -->
+<view>=============================</view>
+<navigator url="/pages/detail/detail?name=不良人&age=18">跳到详情页</navigator>
+<view>{{title}}</view>
+
+<!-- 4.通过代码进行页面跳转 -->
+<button size="mini" bindtap="handlePushDetail">跳转到详情页</button>
